@@ -86,9 +86,9 @@ class TriangularMatrix:
         if linha == i and coluna == j:
             return indice
         if j <= 100:
-            return indiceRecursao_Q6(linha, coluna, i, j + 1, indice)
+            return recursao_matrizAdjacencia(linha, coluna, i, j + 1, indice)
         elif i < 100:
-            return indiceRecursao_Q6(linha, coluna, i + 1, i + 1, indice)
+            return recursao_matrizAdjacencia(linha, coluna, i + 1, i + 1, indice)
         else:
             return -1
 
@@ -118,6 +118,8 @@ class TriangularMatrix:
         vetorMat1 = [0] * vetTam
         vetorMat2 = [0] * vetTam
         vetorMatSoma = [0] * vetTam
+        linha = [0]* matrizTam
+        matrizProduto = [linha]*matrizTam
     
         for i in range(matrizTam):
             for j in range(matrizTam):
@@ -127,6 +129,7 @@ class TriangularMatrix:
                     vetorMat1[vetContador] = matriz1[i][j]
                     vetorMat2[vetContador] = matriz2[i][j]
                     vetCont += 1
+                    matrizProduto
     
         print("\nMatriz 1: ")
         for i in range(matrizTam):
